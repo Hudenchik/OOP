@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/den/Desktop/учеба/ООП/LR2/test"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z3fooPiS_, symObjAddr: 0x0, symBinAddr: 0x100003EB4, symSize: 0x2C }
+  - { offsetInCU: 0x2E38, offset: 0x2E38, size: 0x8, addend: 0x0, symName: __Z3fooPiS_, symObjAddr: 0x0, symBinAddr: 0x100003EB4, symSize: 0x2C }
+  - { offsetInCU: 0x2E7C, offset: 0x2E7C, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x2C, symBinAddr: 0x100003EE0, symSize: 0xA4 }
+...
