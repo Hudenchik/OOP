@@ -8,10 +8,8 @@ protected:
     int age;
     int height;
 public:
-    Human()
+    Human():age(19), height(160)
     {
-        age = 19;
-        height = 160;
         printf("Human() ");
         cout << this << " ";
         printf("%d %d\n", age, height);
@@ -63,7 +61,7 @@ public:
     {
         printf("Student() ");
         cout << this << " ";
-        group = 1111;
+        group = 365;
         printf("%d %d %d\n", age, height, group);
     }
     Student(int age, int height, int group): Human(age, height)
