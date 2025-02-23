@@ -107,6 +107,9 @@ int main()
     Human *e = new Human(15, 150);
     Human *f = new Human(*d);
 
+    delete d;
+    delete e;
+    delete f;
     
     }
 
