@@ -21,8 +21,16 @@ private:
 
 public:
     CCircle(int ValueX, int ValueY):x(ValueX), y(ValueY){}
+
     void draw(QPainter &painter, QRect restriction);
-    bool contains(int px, int py);
+
+    bool circleContains(int px, int py);
+
+    void select(QPainter &painter);
+
+    int getX();
+    int getY();
+    int getRad();
 
 };
 
@@ -37,11 +45,15 @@ public:
 
     void drawCircles(QPainter &painter, QRect restriction);
 
-    ~MyStorage(){
-        for (size_t i = 0; i<circles.size();i++){
-            delete circles[i];
-        }
-    }
+    bool isCircle(int px, int py, bool ctrlPressed);
+
+    void selectCircles(QPainter &painter);
+
+    void deleteCircles();
+
+    void squareSelect(QRect &square);
+
+    ~MyStorage();
 };
 
 class MainWindow : public QMainWindow
@@ -57,12 +69,18 @@ protected:
     void mousePressEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
+    void keyPressEvent(QKeyEvent *event) override;
 
 private:
     Ui::MainWindow *ui;
     MyStorage storage;
+
     bool isResizing = false;
     QPoint lastMousePosition;
+
+    bool squareIsResizing = false;
+    QPoint startPoint;
+    QRect square;
 };
 
 

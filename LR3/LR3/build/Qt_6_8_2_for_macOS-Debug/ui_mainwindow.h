@@ -36,7 +36,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         frame = new QFrame(centralwidget);
         frame->setObjectName("frame");
-        frame->setGeometry(QRect(150, 100, 531, 331));
+        frame->setGeometry(QRect(100, 60, 591, 401));
         frame->setFrameShape(QFrame::Shape::StyledPanel);
         frame->setFrameShadow(QFrame::Shadow::Raised);
         MainWindow->setCentralWidget(centralwidget);
