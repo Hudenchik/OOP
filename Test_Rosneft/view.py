@@ -197,6 +197,8 @@ class Window(QMainWindow):
                 # Обновление модели новыми данными
                 self.model.changeData(dataset[:])
             # Сообщение об успешной загрузке
+            self.showGraphFlag = False
+            self.graph.clear()
             QMessageBox.information(self, "Успешно!", "Данные загружены!")
         except Exception as e:  # Обработка ошибок
             # Сообщение об ошибке с деталями
